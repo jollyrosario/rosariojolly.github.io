@@ -18,8 +18,10 @@
       width: 100%;
       z-index: 100;
     }
+    .content {
+      margin-top: 100px; /* Adjust margin-top to match h1 height */
+    }
     .container {
-      padding-top: 100px;
       text-align: center;
     }
     .product-list {
@@ -44,9 +46,8 @@
       object-fit: cover;
     }
     .order-summary {
-      position: relative;
-      width: 400px;
-      max-width: 100%;
+      width: 100%;
+      max-width: 400px;
       z-index: 1;
       padding: 20px;
       border: 1px solid #ddd;
@@ -91,67 +92,69 @@
 
 <body>
   <h1>Jolly's Rolex Shop</h1>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <ul class="product-list">
-          <li>
-            <div class="image-container">
-              <label id="product1">Rolex Deepsea</label>
-              <img src="r1.avif" class="img-thumbnail"/><br>
-              <label for="product1" id="price1">2965000.00</label>
-              <input type="number" class="form-control" id="qty1" width="10%" placeholder="Enter Quantity"/><br>
-            </div>
-          </li>
-          <li>
-            <div class="image-container">
-              <label id="product2">Yacht-Master</label>
-              <img src="r2.avif" class="img-thumbnail"/><br>
-              <label for="product2" id="price2">770500.00</label>
-              <input type="number" class="form-control" id="qty2" placeholder="Enter Quantity"/><br>
-            </div>
-          </li>
-          <li>
-            <div class="image-container">
-              <label id="product3">GMT-Master II</label>
-              <img src="r3.avif" class="img-thumbnail"/><br>
-              <label for="product3" id="price3">585500.00</label>
-              <input type="number" class="form-control" id="qty3" placeholder="Enter Quantity"/><br>
-            </div>
-          </li>
-          <li>
-            <div class="image-container">
-              <label id="product4">Cosmograph Daytona</label>
-              <img src="r4.avif" class="img-thumbnail"/><br>
-              <label for="product4" id="price4">2149500.00</label>
-              <input type="number" class="form-control" id="qty4" placeholder="Enter Quantity"/><br>
-            </div>
-          </li>
-          <li>
-            <div class="image-container">
-              <label id="product5">Cosmograph Daytona</label>
-              <img src="r5.avif" class="img-thumbnail"/><br>
-              <label for="product5" id="price5">6521000.00</label>
-              <input type="number" class="form-control" id="qty5" placeholder="Enter Quantity"/><br>
-            </div>
-          </li>
-          <li>
-            <div class="image-container">
-              <label id="product6">1908</label>
-              <img src="r6.avif" class="img-thumbnail"/><br>
-              <label for="product6" id="price6">1600000.00</label>
-              <input type="number" class="form-control" id="qty6" placeholder="Enter Quantity"/><br>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-4">
-        <div class="order-summary">
-          <label for="carts">Order</label><br>
-          <textarea class="form-control" rows="15" id="carts" readonly></textarea>
-          <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
-          <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
-          <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <ul class="product-list">
+            <li>
+              <div class="image-container">
+                <label id="product1">Rolex Deepsea</label>
+                <img src="r1.avif" class="img-thumbnail"/><br>
+                <label for="product1" id="price1">2965000.00</label>
+                <input type="number" class="form-control" id="qty1" width="10%" placeholder="Enter Quantity"/><br>
+              </div>
+            </li>
+            <li>
+              <div class="image-container">
+                <label id="product2">Yacht-Master</label>
+                <img src="r2.avif" class="img-thumbnail"/><br>
+                <label for="product2" id="price2">770500.00</label>
+                <input type="number" class="form-control" id="qty2" placeholder="Enter Quantity"/><br>
+              </div>
+            </li>
+            <li>
+              <div class="image-container">
+                <label id="product3">GMT-Master II</label>
+                <img src="r3.avif" class="img-thumbnail"/><br>
+                <label for="product3" id="price3">585500.00</label>
+                <input type="number" class="form-control" id="qty3" placeholder="Enter Quantity"/><br>
+              </div>
+            </li>
+            <li>
+              <div class="image-container">
+                <label id="product4">Cosmograph Daytona</label>
+                <img src="r4.avif" class="img-thumbnail"/><br>
+                <label for="product4" id="price4">2149500.00</label>
+                <input type="number" class="form-control" id="qty4" placeholder="Enter Quantity"/><br>
+              </div>
+            </li>
+            <li>
+              <div class="image-container">
+                <label id="product5">Cosmograph Daytona</label>
+                <img src="r5.avif" class="img-thumbnail"/><br>
+                <label for="product5" id="price5">6521000.00</label>
+                <input type="number" class="form-control" id="qty5" placeholder="Enter Quantity"/><br>
+              </div>
+            </li>
+            <li>
+              <div class="image-container">
+                <label id="product6">1908</label>
+                <img src="r6.avif" class="img-thumbnail"/><br>
+                <label for="product6" id="price6">1600000.00</label>
+                <input type="number" class="form-control" id="qty6" placeholder="Enter Quantity"/><br>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="order-summary">
+            <label for="carts">Order</label><br>
+            <textarea class="form-control" rows="15" id="carts" readonly></textarea>
+            <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
+            <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
+            <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
+          </div>
         </div>
       </div>
     </div>
