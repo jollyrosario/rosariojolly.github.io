@@ -1,84 +1,163 @@
-<DOCTYP html>
-  <html lang="EN" />
-  <title>My Homepage</title>
-
-  <head>
-    <style>
-      h1{
-        text-align: center;
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+  <title>Jolly's Store</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poiret One", sans-serif;
+    }
+    h1 {
+      text-align: center;
+      padding: 10px 0;
+      letter-spacing: 20px;
+      background-color: beige;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+    .container {
+      padding-top: 100px;
+      text-align: center;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product-list > li {
+      margin: 10px;
+      list-style: none;
+    }
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+    }
+    .image-container img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+    .order-summary {
+      position: relative;
+      width: 400px;
+      max-width: 100%;
+      z-index: 1;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+    @media (max-width: 767px) {
+      .order-summary {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
       }
-      
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-  </head>
+      .product-list {
+        padding: 10px;
+      }
+      .image-container img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+    @media (max-width: 479px) {
+      .order-summary {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .product-list {
+        padding: 5px;
+      }
+      .image-container img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
 
-  <body>
-    <h1>Jolly's Store</h1>
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <div class="image-container">
-            <label id="product1">Rolex Deepsea</label>
-            <img src="r1.avif" class="img-thumbnail" style="width:300px;height:300px;"/><br>
-            <label for="product1" id="price1">2965000.00</label>
-            <input type="number" class="form-control" id="qty1" width="10%" placeholder="Enter Quantity"/><br>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="image-container">
-            <label id="product2">Yacht-Master</label>
-            <img src="r2.avif" class="img-thumbnail" style="width:300px;height:300px;"/><br>
-            <label for="product2" id="price2">770500.00</label>
-            <input type="number" class="form-control" id="qty2" placeholder="Enter Quantity"/><br>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="image-container">
-            <label id="product3">GMT-Master II</label>
-            <img src="r3.avif" class="img-thumbnail" style="width:300px;height:300px;"/><br>
-            <label for="product3" id="price3">585500.00</label>
-            <input type="number" class="form-control" id="qty3" placeholder="Enter Quantity"/><br>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="image-container">
-            <label id="product4">Cosmograph Daytona</label>
-            <img src="r4.avif" class="img-thumbnail" style="width:300px;height:300px;"/><br>
-            <label for="product4" id="price4">2149500.00</label>
-            <input type="number" class="form-control" id="qty4" placeholder="Enter Quantity"/><br>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="image-container">
-            <label id="product5">Cosmograph Daytona</label>
-            <img src="r5.avif" class="img-thumbnail" style="width:300px;height:300px;"/><br>
-            <label for="product5" id="price5">6521000.00</label>
-            <input type="number" class="form-control" id="qty5" placeholder="Enter Quantity"/><br>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="image-container">
-            <label id="product6">1908</label>
-            <img src="r6.avif" class="img-thumbnail" style="width:300px;height:300px;"/><br>
-            <label for="product6" id="price6">1600000.00</label>
-            <input type="number" class="form-control" id="qty6" placeholder="Enter Quantity"/><br>
-          </div>
-        </div>
-        <div class="col-4">
+<body>
+  <h1>Jolly's Rolex Shop</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <ul class="product-list">
+          <li>
+            <div class="image-container">
+              <label id="product1">Rolex Deepsea</label>
+              <img src="r1.avif" class="img-thumbnail"/><br>
+              <label for="product1" id="price1">2965000.00</label>
+              <input type="number" class="form-control" id="qty1" width="10%" placeholder="Enter Quantity"/><br>
+            </div>
+          </li>
+          <li>
+            <div class="image-container">
+              <label id="product2">Yacht-Master</label>
+              <img src="r2.avif" class="img-thumbnail"/><br>
+              <label for="product2" id="price2">770500.00</label>
+              <input type="number" class="form-control" id="qty2" placeholder="Enter Quantity"/><br>
+            </div>
+          </li>
+          <li>
+            <div class="image-container">
+              <label id="product3">GMT-Master II</label>
+              <img src="r3.avif" class="img-thumbnail"/><br>
+              <label for="product3" id="price3">585500.00</label>
+              <input type="number" class="form-control" id="qty3" placeholder="Enter Quantity"/><br>
+            </div>
+          </li>
+          <li>
+            <div class="image-container">
+              <label id="product4">Cosmograph Daytona</label>
+              <img src="r4.avif" class="img-thumbnail"/><br>
+              <label for="product4" id="price4">2149500.00</label>
+              <input type="number" class="form-control" id="qty4" placeholder="Enter Quantity"/><br>
+            </div>
+          </li>
+          <li>
+            <div class="image-container">
+              <label id="product5">Cosmograph Daytona</label>
+              <img src="r5.avif" class="img-thumbnail"/><br>
+              <label for="product5" id="price5">6521000.00</label>
+              <input type="number" class="form-control" id="qty5" placeholder="Enter Quantity"/><br>
+            </div>
+          </li>
+          <li>
+            <div class="image-container">
+              <label id="product6">1908</label>
+              <img src="r6.avif" class="img-thumbnail"/><br>
+              <label for="product6" id="price6">1600000.00</label>
+              <input type="number" class="form-control" id="qty6" placeholder="Enter Quantity"/><br>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="order-summary">
           <label for="carts">Order</label><br>
-          <textarea class="form-control" rows="15" id="carts" cols="200" readonly
-            style="width: 700;height: 400;font-size: 12px;"></textarea>
+          <textarea class="form-control" rows="15" id="carts" readonly></textarea>
           <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
           <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
           <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
         </div>
       </div>
     </div>
-    <script src="index.js"></script>
-  </body>
+  </div>
 
-  </html>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>
