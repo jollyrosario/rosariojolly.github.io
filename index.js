@@ -77,17 +77,6 @@ function calculateChange() {
     }
 }
 
-  function pay() {
-
-    carts.textContent = "";
-
-    total.value = "";
-    cash.value = "";
-    change.value = "";
-
-    alert("Thank you for your order! If the shoe fits, walk in it 'til it break");
-}
-
 qty1.addEventListener("keyup", addOrder);
 qty2.addEventListener("keyup", addOrder);
 qty3.addEventListener("keyup", addOrder);
